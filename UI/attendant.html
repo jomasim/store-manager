@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>store-manager</title>
+    <link href="static/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="static/js/app.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <img src="static/images/cart-nav.png" class="nav-logo">
+            <span class="nav-title">StoreManager</span>
+            <hr>
+            <div class="toggle-btn" onclick="toggleSidebar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="attendant.html">Store Attendants</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Sales</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="main-nav">
+                <a href="index.html"><img src="static/images/sign-out.png" class="btn-sign-out"></a>
+            </div>
+            <div class="content">
+                <div class="sign-box">
+                    <img src="static/images/cart.png" class="login-logo">
+                    <h3 class="form-title">Store attendant sign up</h3>
+                    <form>
+                        <div class="form-group">
+                            <label class="login-label">Name</label>
+                            <input type="text" name="name" placeholder="name">
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Email</label>
+                            <input type="text" name="email" placeholder="xyz@mail.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Phone</label>
+                            <input type="text" name="phone" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Username</label>
+                            <input type="text" name="username" placeholder="username">
+                        </div>
+                        <div class="form-group">
+                            <label class="login-label">Password</label>
+                            <input type="password" name="password" placeholder="password">
+                        </div>
+                        <input type="submit" value="SIGN UP" class="btn-sign-up">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

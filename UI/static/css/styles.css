@@ -20,6 +20,16 @@ body {
     background: rgba(52, 73, 94, 0.7);
 }
 
+.sign-box {
+    width: 500px;
+    height: 520px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: rgba(52, 73, 94, 0.7);
+}
+
 input[type="text"],
 input[type="password"] {
     height: 45px;
@@ -31,6 +41,14 @@ input[type="password"] {
 }
 
 .btn-login {
+    padding: 15px 25px;
+    color: #fff;
+    background-color: #2ECC71;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn-sign-up {
     padding: 15px 25px;
     color: #fff;
     background-color: #2ECC71;
@@ -63,6 +81,12 @@ a:hover {
     color: white;
     font-weight: bold;
     font-family: sans-serif;
+    width: 30px;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 100px;
 }
 
 .login-logo {

@@ -5,3 +5,7 @@ function toggleSidebar() {
 function login() {
     window.location.replace("../home.html")
 }
+
+function backHome() {
+    window.location.replace("home.html")
+}

@@ -239,6 +239,10 @@
         text-align: left;
     }
     
+    table th {
+        background: rgba(52, 73, 94, 0.7);
+    }
+    
     tr:nth-child(even) {
         background-color: #f2f2f2
     }

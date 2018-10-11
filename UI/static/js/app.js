@@ -4,7 +4,11 @@ function toggleSidebar() {
 
 function login(user = "") {
     window.location.replace("../home.html")
-    if (user) {
+  if (user) {
         window.location.replace("home.html")
     }
+}
+
+function backHome() {
+    window.location.replace("home.html")
 }

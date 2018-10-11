@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>store-manager</title>
+    <link href="static/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="static/js/app.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <img src="static/images/cart-nav.png" class="nav-logo">
+            <span class="nav-title">StoreManager</span>
+            <hr>
+            <div class="toggle-btn" onclick="toggleSidebar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="attendants.html">Store Attendants</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Sales</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="main-nav">
+                <a href="index.html"><img src="static/images/sign-out.png" class="btn-sign-out"></a>
+            </div>
+            <div class="content-head">
+                <h4>CART</h4>
+                <hr class="content-break">
+            </div>
+            <div class="content">
+                <div class="cart-table">
+                    <table>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td>44747</td>
+                            <td>Dark Red Shirt</td>
+                            <td>1</td>
+                            <td>Ksh 1200/=</td>
+                            <td>Ksh 1200/=</td>
+                        </tr>
+                        <tr>
+                            <td>45288</td>
+                            <td>Running Shoes HDD</td>
+                            <td>2</td>
+                            <td>Ksh 1000/=</td>
+                            <td>Ksh 2000/=</td>
+                        </tr>
+                        <tr>
+                            <td>454565</td>
+                            <td>Girl Dress</td>
+                            <td>2</td>
+                            <td>Ksh 1500/=</td>
+                            <td>Ksh 3000/=</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="summary">
+                    <h4>summary</h4>
+                    <table>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>total</th>
+                        </tr>
+                        <tr>
+                            <td>Dark Red Shirt</td>
+                            <td>1</td>
+                            <td>Ksh 1000</td>
+                        </tr>
+                        <tr>
+                            <td>Dark Red Shirt</td>
+                            <td>1</td>
+                            <td>Ksh 1000</td>
+                        </tr>
+                        <tr>
+                            <td>Dark Red Shirt</td>
+                            <td>1</td>
+                            <td>Ksh 1000</td>
+                        </tr>
+                        <tr class="table footer">
+                            <td>Total</td>
+                            <td>----</td>
+                            <td>Ksh 3000</td>
+                        </tr>
+                    </table>
+                    <input type="button" value="BACK" name="back" class="back-home" onclick="backHome()">
+                    <input type="button" value="PROCEED TO CHECKOUT" name="checkout" class="checkout">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

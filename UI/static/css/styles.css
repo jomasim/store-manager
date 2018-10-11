@@ -189,3 +189,8 @@ a:hover {
     color: white;
     border: solid 1px;
 }
+
+.search {
+    margin-left: 40%;
+    margin-top: 8px;
+}

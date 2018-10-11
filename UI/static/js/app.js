@@ -2,8 +2,11 @@ function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('active');
 }
 
-function login() {
+function login(user = "") {
     window.location.replace("../home.html")
+  if (user) {
+        window.location.replace("home.html")
+    }
 }
 
 function backHome() {

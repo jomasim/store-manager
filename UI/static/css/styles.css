@@ -235,8 +235,9 @@
     
     table {
         border: solid 1px;
-        width: 50%;
+        width: 100%;
         text-align: left;
+        font-family: sans-serif;
     }
     
     table th {
@@ -249,5 +250,47 @@
     
     .cart-table {
         margin-top: 40px;
-        margin-left: 40px;
+        margin-left: 20px;
+        width: 50%;
+        float: left;
+    }
+    
+    .summary {
+        float: right;
+        width: 300px;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+    
+    .summary h4 {
+        padding-left: 10px;
+        border: solid 1px;
+        color: white;
+        background: rgb(12, 12, 48);
+    }
+    
+    .summary table tr {
+        height: 50px;
+    }
+    
+    .table-footer {
+        font-weight: bolder;
+    }
+    
+    .checkout {
+        margin-top: 20px;
+        background: #2ECC71;
+        color: white;
+        border: solid 1px;
+        height: 40px;
+        font-weight: bold;
+    }
+    
+    .back-home {
+        margin-top: 20px;
+        background: rgb(12, 12, 48);
+        color: white;
+        border: solid 1px;
+        height: 40px;
+        font-weight: bold;
     }

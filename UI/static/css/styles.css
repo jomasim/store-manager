@@ -300,6 +300,17 @@
         font-weight: bold;
     }
     
+    .add-product-btn {
+        margin-top: 20px;
+        background: rgba(24, 117, 209, 0.7);
+        opacity: 0.9;
+        color: white;
+        border: solid 1px;
+        height: 40px;
+        font-weight: bold;
+        float: right;
+    }
+    
     .back-home {
         margin-top: 20px;
         background: rgb(12, 12, 48);
@@ -330,4 +341,16 @@
     .add-product-box input {
         height: 25px;
         width: 140px;
+        font-size: 15px;
+        text-align: left;
+    }
+    
+    .product-form label,
+    h3 {
+        color: black;
+    }
+    
+    .product-form hr {
+        margin-bottom: 10px;
+        margin-top: 10px;
     }

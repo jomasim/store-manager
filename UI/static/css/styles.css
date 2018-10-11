@@ -314,3 +314,7 @@
         opacity: 0.5;
         text-decoration: none;
     }
+    
+    .content-head hr {
+        margin-top: 32px;
+    }

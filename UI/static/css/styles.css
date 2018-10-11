@@ -217,9 +217,8 @@
     }
     
     .content-head h4 {
-        padding: 10px 60px;
-        color: rgb(12, 12, 48);
-        opacity: 0.3;
+        padding: 10px 20px;
+        color: black;
     }
     
     .content-cart {
@@ -242,7 +241,9 @@
     }
     
     table th {
-        background: rgba(52, 73, 94, 0.7);
+        background: rgba(24, 117, 209, 0.7);
+        opacity: 0.8;
+        color: white;
     }
     
     tr:nth-child(even) {
@@ -263,6 +264,13 @@
     }
     
     .summary {
+        float: right;
+        width: 300px;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+    
+    .add-product-box {
         float: right;
         width: 300px;
         margin-right: 20px;
@@ -293,6 +301,17 @@
         font-weight: bold;
     }
     
+    .add-product-btn {
+        margin-top: 20px;
+        background: rgba(24, 117, 209, 0.7);
+        opacity: 0.9;
+        color: white;
+        border: solid 1px;
+        height: 40px;
+        font-weight: bold;
+        float: right;
+    }
+    
     .back-home {
         margin-top: 20px;
         background: rgb(12, 12, 48);
@@ -318,4 +337,21 @@
     
     .content-head hr {
         margin-top: 32px;
+    }
+    
+    .add-product-box input {
+        height: 25px;
+        width: 140px;
+        font-size: 15px;
+        text-align: left;
+    }
+    
+    .product-form label,
+    h3 {
+        color: black;
+    }
+    
+    .product-form hr {
+        margin-bottom: 10px;
+        margin-top: 10px;
     }

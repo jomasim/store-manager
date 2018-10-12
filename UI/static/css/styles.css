@@ -182,3 +182,81 @@ a:hover {
     height: 62px;
     background: rgba(100, 100, 100, 0.3);
 }
+
+.card {
+    background: white;
+    width: 250px;
+    height: 400px;
+    float: left;
+    margin: 20px 10px;
+}
+
+.product {
+    height: 200px;
+    width: 220px;
+    padding: 20px 23px;
+}
+
+.break {
+    width: 200;
+    margin-left: 25px;
+    opacity: 0.1;
+}
+
+.description {
+    font-family: sans-serif;
+    margin: 10px 2px;
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.btn-add-to-cart {
+    margin-left: 90px;
+    margin-top: 25px;
+    background: #2ECC71;
+    color: white;
+    border: solid 1px;
+}
+
+.search {
+    margin-left: 40%;
+    margin-top: 8px;
+}
+
+.content-break {
+    width: 96%;
+    margin-top: 20px;
+    margin-left: 20px;
+    opacity: 0.4;
+}
+
+.content-head ul li {
+    display: inline;
+    padding: 20px;
+}
+
+.content-head a {
+    color: black;
+}
+
+.content-head a:hover {
+    color: coral;
+}
+
+.content-head h4 {
+    padding: 10px 60px;
+    color: rgb(12, 12, 48);
+    opacity: 0.3;
+}
+
+.content-cart {
+    width: 40px;
+    float: right;
+    margin-right: 40px;
+}
+
+.content-cart-total {
+    width: 20px;
+    float: right;
+    margin-right: 10px;
+}

@@ -73,6 +73,10 @@ h3 {
     margin-bottom: 20px;
 }
 
+.form-group {
+    display: inline-block;
+}
+
 a:hover {
     color: coral;
 }

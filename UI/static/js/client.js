@@ -11,7 +11,7 @@ export default class ApiClient {
     //method saves retrives access token from local storage
 
     getToken() {
-        localStorage.getItem("access_token")
+        return localStorage.getItem("access_token")
     }
 
 
@@ -83,5 +83,13 @@ export default class ApiClient {
                 'Access-Control-Request-Method': 'DELETE',
             },
         });
+    }
+
+    session() {
+        if (this.getToken()) {
+            return true
+        } else {
+            return false
+        }
     }
 }

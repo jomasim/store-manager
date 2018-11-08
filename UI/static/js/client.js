@@ -14,11 +14,15 @@ export default class ApiClient {
         return localStorage.getItem("access_token")
     }
 
+    revokeToken() {
+        return localStorage.removeItem("access_token")
+    }
 
     post(url, data) {
         url = base_url + url
         let token = this.getToken()
         let access_token = `Bearer ${token}`
+
 
         return fetch(url, {
             method: 'POST',
@@ -68,11 +72,12 @@ export default class ApiClient {
         });
     }
 
-    delete(url, data) {
+    delete(url) {
         url = base_url + url
         let token = this.getToken()
         let access_token = `Bearer ${token}`
-
+        console.log(access_token)
+        console.log(url)
         return fetch(url, {
             method: 'DELETE',
             headers: {

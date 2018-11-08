@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div id="notification"></div>
     <div class="header">
         <h3><span>Store</span><span class="header-name">Manager</span></h3>
     </div>
@@ -15,16 +16,16 @@
         <div class="login-box">
             <img src="static/images/cart.png" class="login-logo">
             <h3 class="form-title">StoreManager</h3>
-            <form>
+            <form id="login-form">
                 <div class="form-group">
-                    <label class="login-label">Username</label>
-                    <input type="text" name="username" placeholder="username">
+                    <label class="login-label">Email</label>
+                    <input id="email" type="text" name="email" placeholder="email" required>
                 </div>
                 <div class="form-group">
                     <label class="login-label">Password</label>
-                    <input type="password" name="password" placeholder="password">
+                    <input type="password" name="password" placeholder="password" id="password" required>
                 </div>
-                <input id="login" type="button" value="LOGIN">
+                <input id="login" type="submit" value="LOGIN">
             </form>
             <a href="#">Forgot password?</a>
         </div>

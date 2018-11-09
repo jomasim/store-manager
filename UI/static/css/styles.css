@@ -186,6 +186,12 @@ a:hover {
     margin: 20px 10px;
 }
 
+.card p,
+h4,
+h2 {
+    padding-left: 7px;
+}
+
 .product {
     height: 200px;
     width: 220px;
@@ -201,6 +207,7 @@ a:hover {
 .description {
     font-family: sans-serif;
     margin: 10px 2px;
+    height: 18%;
     opacity: 0.5;
     font-size: 12px;
 }
@@ -211,6 +218,8 @@ a:hover {
     background: #2ECC71;
     color: white;
     border: solid 1px;
+    font: bold 12px Georgia, serif;
+    height: 30px;
 }
 
 .search {

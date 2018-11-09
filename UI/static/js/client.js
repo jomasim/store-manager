@@ -37,7 +37,7 @@ export default class ApiClient {
         });
     }
 
-    get(url, data) {
+    get(url) {
         url = base_url + url
         let token = this.getToken()
         let access_token = `Bearer ${token}`

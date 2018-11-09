@@ -48,5 +48,5 @@ function login(e) {
                 document.getElementById('notification').focus()
             }
 
-        })
+        }).catch(err => console.log(err))
 }

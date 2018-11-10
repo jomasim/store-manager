@@ -1,6 +1,6 @@
 let base_url = 'https://store-api-v2.herokuapp.com/api/v2/'
 
-export default class ApiClient {
+class ApiClient {
 
     // method set api access token 
 
@@ -99,3 +99,5 @@ export default class ApiClient {
         }
     }
 }
+
+module.exports = ApiClient

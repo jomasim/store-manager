@@ -1,0 +1,23 @@
+{
+    "devDependencies": {
+        "jest": "^23.6.0"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "jest": {
+        "collectCoverage": true,
+        "collectCoverageFrom": [
+            "UI/static/*.js"
+        ],
+        "moduleFileExtensions": [
+            "js"
+        ],
+        "moduleDirectories": [
+            "node_modules"
+        ]
+    },
+    "dependencies": {
+        "coveralls": "^3.0.2"
+    }
+}

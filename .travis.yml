@@ -4,4 +4,7 @@ node_js: node
 
 cache: yarn
 
-script: yarn jest --coverageReporters=text-lcov | coveralls
+script: yarn jest -- -u --coverage
+
+after_success:
+  - coveralls < coverage/lcov.info

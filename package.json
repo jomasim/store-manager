@@ -4,5 +4,11 @@
     },
     "scripts": {
         "test": "jest"
+    },
+    "jest": {
+        "collectCoverage": true,
+        "collectCoverageFrom": ["UI/static/*.js"],
+        "moduleFileExtensions": ["js"],
+        "moduleDirectories": ["node_modules"]
     }
 }

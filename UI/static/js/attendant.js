@@ -27,7 +27,7 @@ function addAttendant(e) {
         ))
         .then(payload => {
             let message = payload.body.message
-            if (payload.status == 200) {
+            if (payload.status === 201) {
 
                 setTimeout(() => {
                     //notify user sign up success message

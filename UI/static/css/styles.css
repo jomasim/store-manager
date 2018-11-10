@@ -396,3 +396,62 @@ h3 {
     background: maroon;
     text-align: center
 }
+
+
+/* The Modal background */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0px;
+    left: 52%;
+    top: 100px;
+    width: 23%;
+    height: 100%;
+    overflow: auto;
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+/* The close Button on modal */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit-box input {
+    height: 25px;
+    width: 85%;
+}
+
+.edit-box-btn {
+    margin-top: 10px;
+    background: rgba(24, 117, 209, 0.7);
+    opacity: 0.9;
+    color: white;
+    border: solid 1px;
+    height: 50px;
+    margin-left: 18px;
+    font-weight: bold;
+}

@@ -6,7 +6,7 @@ document.getElementById('notification').removeAttribute("class")
 let client = new ApiClient()
 
 
-function addProduct(e) {
+export function addProduct(e) {
     e.preventDefault();
 
     let product_name = document.getElementById('product-name').value;
@@ -32,7 +32,7 @@ function addProduct(e) {
         ))
         .then(payload => {
             let message = payload.body.message
-            if (payload.status == 200) {
+            if (payload.status === 201) {
 
                 setTimeout(() => {
                     //notify product posting success message

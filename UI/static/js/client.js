@@ -69,6 +69,7 @@ export default class ApiClient {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Request-Method': 'PUT',
             },
+            body: JSON.stringify(data)
         });
     }
 

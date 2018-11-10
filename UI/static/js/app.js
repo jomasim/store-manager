@@ -11,23 +11,13 @@ if (!client.session() && route_name !== "index.html") {
     document.getElementById('notification').innerHTML = message
     document.getElementById('notification').className = "error"
     document.getElementById('notification').focus()
-    window.location.replace('index.html')
+        // window.location.replace('index.html')
 
 }
 
 if (document.getElementById('logout')) {
     document.getElementById('logout').addEventListener("click", logout)
 }
-
-
-function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('active');
-}
-
-function backHome() {
-    window.location.replace("home.html")
-}
-
 
 function logout() {
     client.revokeToken()

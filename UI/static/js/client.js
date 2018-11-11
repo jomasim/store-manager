@@ -4,6 +4,10 @@ class ApiClient {
 
     // method set api access token 
 
+    constructor() {
+
+    }
+
     setToken(token) {
         localStorage.setItem("access_token", token)
     }
@@ -100,4 +104,4 @@ class ApiClient {
     }
 }
 
-module.exports = ApiClient
+export default ApiClient

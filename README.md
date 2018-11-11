@@ -3,8 +3,10 @@
 [![Coverage Status](https://coveralls.io/repos/github/jomasim/store-manager/badge.svg?branch=gh-pages)](https://coveralls.io/github/jomasim/store-manager?branch=gh-pages)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1f9c11386327740e138c/maintainability)](https://codeclimate.com/github/jomasim/store-manager/maintainability)
 
-Store Manager is a frontend application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.The app consumes  a restful API available at :['https://store-api-v2.herokuapp.com/api/v2/']('https://store-api-v2.herokuapp.com/api/v2/')
-The app is published at : [https://jomasim.github.io/store-manager/UI](https://jomasim.github.io/store-manager/)
+Store Manager is a frontend application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.The app consumes  a restful API available at :
+['https://store-api-v2.herokuapp.com/api/v2/']('https://store-api-v2.herokuapp.com/api/v2/')
+The app is published at : 
+[https://jomasim.github.io/store-manager/UI/](https://jomasim.github.io/store-manager/UI/)
 
 Default login user/admin :
 - email : support@gmail.com
@@ -54,7 +56,7 @@ $ yarn test
 ```
 
 # Framework
-HTML,CSS,js
+HTML * CSS * js
 
 # Author
-joma sim[jomasim](https://github.com/jomasim)
+[jomasim](https://github.com/jomasim)

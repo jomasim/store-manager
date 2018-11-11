@@ -1,5 +1,6 @@
 import ApiClient from './client.js'
 
+
 let client = new ApiClient()
 let url = window.location.href;
 var route_name = url.substr(url.lastIndexOf('/') + 1);

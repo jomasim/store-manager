@@ -58,10 +58,6 @@ function deleteBtn(id) {
     return delete_btn;
 }
 
-function deleteRecord(id) {
-
-}
-
 function editBtn(product) {
     var product = JSON.stringify(product)
     var list_string = "" + product + ""

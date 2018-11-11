@@ -1,6 +1,7 @@
 {
     "devDependencies": {
-        "jest": "^23.6.0"
+        "jest": "^23.6.0",
+        "jest-localstorage-mock": "^2.3.0"
     },
     "scripts": {
         "test": "jest"
@@ -15,9 +16,11 @@
         ],
         "moduleDirectories": [
             "node_modules"
-        ]
+        ],
+        "setupTestFrameworkScriptFile": "./setup.js"
     },
     "dependencies": {
-        "coveralls": "^3.0.2"
+        "coveralls": "^3.0.2",
+        "esm": "^3.0.84"
     }
 }

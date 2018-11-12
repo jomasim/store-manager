@@ -327,6 +327,7 @@ tr:nth-child(even) {
     margin-top: 20px;
     background: #2ECC71;
     color: white;
+    float: right;
     border: solid 1px;
     height: 40px;
     font-weight: bold;
@@ -347,6 +348,7 @@ tr:nth-child(even) {
     margin-top: 20px;
     background: rgb(12, 12, 48);
     color: white;
+    float: right;
     border: solid 1px;
     height: 40px;
     font-weight: bold;
@@ -454,4 +456,17 @@ h3 {
     height: 50px;
     margin-left: 18px;
     font-weight: bold;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    width: 8px;
+    height: 8px;
+    padding: 4px;
+    background: rgb(4, 161, 70);
+    border: 2px solid #666;
+    color: white;
+    text-align: center;
+    font: 16px Arial, sans-serif;
 }

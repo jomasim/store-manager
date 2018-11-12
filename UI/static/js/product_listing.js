@@ -9,14 +9,14 @@ window.onload = function(event) {
             payload => ({ status: response.status, body: payload })
         ))
         .then(payload => {
-            if (payload.status == 200) {
+            if (payload.status === 200) {
                 let products = payload.body.products
 
 
                 let container = document.getElementById("product-listing");
 
                 products.forEach(product => {
-                    var item = card(product.name, product.description.info, product.price)
+                    var item = card(product)
                     container.innerHTML += item;
                 });
             }
@@ -25,10 +25,14 @@ window.onload = function(event) {
 
 }
 
-function card(title, desc, price) {
-    var title = title
-    var desc = desc
-    var price = "Ksh " + price + "/="
+function card(product) {
+    var title = product.name
+    var desc = product.description.info
+    var price = "Ksh " + product.price + "/="
+
+    var product = JSON.stringify(product)
+    var list_string = " " + product + " "
+
 
     let card = `
                 <div class="card">
@@ -42,7 +46,8 @@ function card(title, desc, price) {
                         <h2>${price}</h2>
                     </div>
                     <div>
-                         <input type="button" value="ADD TO CART" name="add-cart" class="btn-add-to-cart">
+                         <button id="add-cart-btn" class="btn-add-to-cart" onclick='addToCart(${list_string})' >ADD TO CART
+                         </button>
                     </div>
                 </div>
             `

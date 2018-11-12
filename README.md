@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1f9c11386327740e138c/maintainability)](https://codeclimate.com/github/jomasim/store-manager/maintainability)
 
 Store Manager is a frontend application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.The app consumes  a restful API available at :
-[https://store-api-v2.herokuapp.com/api/v2/]('https://store-api-v2.herokuapp.com/api/v2/')
+[https://store-api-v2.herokuapp.com/](https://store-api-v2.herokuapp.com/)
 The app is published at : 
 [https://jomasim.github.io/store-manager/UI/](https://jomasim.github.io/store-manager/UI/)
 
@@ -19,14 +19,14 @@ Default login user/admin :
 
 # Features
 - Sign in
-- Store attendant sign up
+- Store attendant sign up by store admin
 - Sign out
-- Add new product
-- View all products
-- Update products
-- Delete products
-- View all sales
-- Add products/item to cart
+- Add new product by store admin
+- View all products store attendant/admin
+- Update products by store admin
+- Delete products by store admin
+- View all sales store attendant/admin
+- Add products/item to cart by store attendant/admin
 
 
 # install dependencies 
@@ -56,7 +56,9 @@ $ yarn test
 ```
 
 # Framework
-HTML * CSS * js
+- HTML - desiging pages 
+- CSS - styling pages 
+- js - handling frontend logic
 
 # Author
 [jomasim](https://github.com/jomasim)

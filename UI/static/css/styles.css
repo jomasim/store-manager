@@ -470,3 +470,9 @@ h3 {
     text-align: center;
     font: 16px Arial, sans-serif;
 }
+
+.divider {
+    background: rgb(84, 84, 129);
+    height: 20px;
+    color: white
+}

@@ -4,6 +4,11 @@ node_js: node
 
 cache: yarn
 
+branches:
+  only:
+  - gh-pages
+  - /.*/
+
 script: yarn jest -- -u --coverage
 
 after_success:

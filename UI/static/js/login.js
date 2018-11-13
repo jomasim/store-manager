@@ -28,10 +28,18 @@ function login(e) {
         ))
         .then(payload => {
             let message = payload.body.message
-            if (payload.status == 200) {
+            if (payload.status === 200) {
 
                 // save token to localstorage
                 client.setToken(payload.body.access_token)
+
+                // set exp time
+                let exp = new Date('1970-01-01T' + payload.body.exp + 'Z');
+                let time = new Date()
+
+                // add  exp to current time
+                time = new Date(time.setMinutes(time.getMinutes() + exp.getMinutes()))
+                client.setExpTime(time)
 
                 setTimeout(() => {
                     //notify success on login
@@ -39,7 +47,7 @@ function login(e) {
                     document.getElementById('notification').className = "success"
                     document.getElementById('notification').focus()
                     window.location.href = 'home.html'
-                }, 1000)
+                }, 100)
 
             } else {
                 // notify login errors 

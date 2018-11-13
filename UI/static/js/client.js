@@ -96,11 +96,19 @@ class ApiClient {
     }
 
     session() {
-        if (this.getToken()) {
-            return true
-        } else {
+        let now = new Date()
+        let exp = this.getExpTime() ? new Date(this.getExpTime()) : now
+        let diff = exp - now
+        if (diff <= 0) {
             return false
         }
+        return true
+    }
+    setExpTime(time) {
+        localStorage.setItem('exp', time)
+    }
+    getExpTime() {
+        return localStorage.getItem('exp')
     }
 }
 

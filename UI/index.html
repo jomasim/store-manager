@@ -8,29 +8,29 @@
 </head>
 
 <body>
-    <div id="notification"></div>
-    <div class="header">
-        <h3><span>Store</span><span class="header-name">Manager</span></h3>
-    </div>
     <div class="container">
+        <div class="header">
+            <img src="static/images/cart.png">
+            <h2>StoreManager</h2>
+            <a href="#">Contact Support</a>
+        </div>
         <div class="login-box">
-            <img src="static/images/cart.png" class="login-logo">
-            <h3 class="form-title">StoreManager</h3>
+            <p id="notification" id="login-alert"></p>
             <form id="login-form">
-                <div class="form-group">
-                    <label class="login-label">Email</label>
-                    <input id="email" type="text" name="email" placeholder="email" required>
+                <label class="login-label">Email</label>
+                <input id="email" type="text" name="email" placeholder="email" required>
+                <p> <a href="#">Forgot password?</a></p>
+                <label class="login-label">Password</label>
+                <input type="password" name="password" placeholder="password" id="password" required>
+                <div class="below-login">
+                    <input id="login" type="submit" value="Login">
                 </div>
-                <div class="form-group">
-                    <label class="login-label">Password</label>
-                    <input type="password" name="password" placeholder="password" id="password" required>
-                </div>
-                <input id="login" type="submit" value="LOGIN">
             </form>
-            <a href="#">Forgot password?</a>
         </div>
     </div>
-    <footer class="footer">@StoreManager2018</footer>
+    <footer class="footer">
+        <p>Terms|Conditions</p>
+    </footer>
     <script src="static/js/login.js" type="module"></script>
 </body>
 

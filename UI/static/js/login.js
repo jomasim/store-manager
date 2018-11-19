@@ -27,10 +27,10 @@ function login(e) {
             payload => ({ status: response.status, body: payload })
         ))
         .then(payload => {
-            let message = payload.body.message
+            let message = "An error occured"
             if (payload.status === 200) {
-
-                // save token to localstorage
+                message = "Login Successful!"
+                    // save token to localstorage
                 client.setToken(payload.body.access_token)
 
                 // set exp time
@@ -41,19 +41,24 @@ function login(e) {
                 time = new Date(time.setMinutes(time.getMinutes() + exp.getMinutes()))
                 client.setExpTime(time)
 
+                //notify success on login
+                document.getElementById('notification').innerHTML = message
+                document.getElementById('notification').className = "success"
+
                 setTimeout(() => {
-                    //notify success on login
-                    document.getElementById('notification').innerHTML = message
-                    document.getElementById('notification').className = "success"
-                    document.getElementById('notification').focus()
+                    document.getElementById('notification').removeAttribute("class")
+                    document.getElementById('notification').innerHTML = ""
                     window.location.href = 'home.html'
-                }, 100)
+                }, 2500)
 
             } else {
                 // notify login errors 
                 document.getElementById('notification').innerHTML = message
                 document.getElementById('notification').className = "error"
-                document.getElementById('notification').focus()
+                setTimeout(() => {
+                    document.getElementById('notification').removeAttribute("class")
+                    document.getElementById('notification').innerHTML = ""
+                }, 2500)
             }
 
         }).catch(err => console.log(err))

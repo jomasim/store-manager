@@ -3,7 +3,9 @@
 }
 
 body {
-    background: #d3d3d3;
+    background: #f0f0f0;
+    color: #444;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .container {
@@ -11,39 +13,62 @@ body {
 }
 
 .login-box {
-    width: 500px;
-    height: 350px;
-    text-align: center;
-    border-radius: 4px;
-    margin: 0 auto;
-    margin-top: 150px;
-    background: rgba(52, 73, 94, 0.7);
+    width: 340px;
+    height: 312px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #c7d0d2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+#login-alert {
+    top: 50%;
+    left: 50%;
+    height: 40px;
+    margin-top: -140px;
+    margin-left: -170px;
+}
+
+input {
+    outline: none;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 input[type="text"],
 input[type="password"] {
-    height: 45px;
-    width: 300px;
-    font-size: 18px;
+    width: 270px;
+    margin-top: 12px;
     margin-bottom: 20px;
-    background: #fff;
-    padding-left: 20px;
+    color: #777;
+    height: 35px;
+    margin-left: 20px;
+    padding-left: 10px;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 2.7px #f5f7f8;
 }
 
-.btn-login {
-    padding: 15px 25px;
+#login {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
     color: #fff;
-    background-color: #2ECC71;
-    border-radius: 4px;
-    border: none;
+    background-color: #51b1e9;
+    cursor: pointer;
+    border-radius: 16px;
 }
 
-.btn-sign-up {
-    padding: 15px 25px;
-    color: #fff;
-    background-color: #2ECC71;
-    border-radius: 4px;
-    border: none;
+form {
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 a {
@@ -59,50 +84,81 @@ h3 {
     color: white;
 }
 
-.form-title {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: inline-block;
-    width: 100px;
-}
-
 a:hover {
     color: coral;
 }
 
 .login-label {
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
+    color: #555;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 20px;
+    padding-top: 10px;
 }
 
-.login-logo {
-    margin-top: 10px;
+.form-label {
+    color: #555;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: -8px;
+}
+
+.below-login {
+    background: #ecf2f5;
+    width: 100%;
+    height: 69px;
+    margin-top: 16px;
+}
+
+p a {
+    font-size: 11px;
+    color: #aaa;
+    float: right;
+    margin-top: 12px;
+    margin-right: 40px;
 }
 
 .footer {
-    color: white;
-    background: rgba(52, 73, 94, 0.7);
-    font-family: sans-serif;
+    color: #444;
+    background: #fff;
     text-align: center;
-    margin-top: 150px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     height: 40px;
+}
+
+.footer p {
+    padding-top: 10px;
 }
 
 .header {
-    color: white;
-    background: rgba(52, 73, 94, 0.7);
-    font-family: sans-serif;
+    background: #fff;
     text-align: left;
-    padding: 10px;
+    padding: 15px;
     margin-top: 0px;
-    height: 40px;
+    height: 35px;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.header-name {
-    color: #2ECC71;
+.header h2 {
+    width: 150px;
+    font-size: 16px;
+    float: left;
+    padding-top: 5px;
+}
+
+.header a {
+    color: #444;
+    padding-top: 5px;
+    float: right;
+}
+
+.header img {
+    width: 40px;
+    margin-top: -3px;
+    float: left;
+    height: 40px;
 }
 
 #sidebar {
@@ -154,17 +210,56 @@ a:hover {
 
 .main {
     width: 100%;
+    background: #fff;
     float: right;
 }
 
 .sign-box {
-    width: 500px;
-    height: 520px;
+    width: 320px;
+    float: right;
+    height: 490px;
     text-align: center;
     border-radius: 4px;
     margin: 0 auto;
-    margin-top: 40px;
-    background: rgba(52, 73, 94, 0.7);
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #c7d0d2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.sign-box input {
+    width: 70%;
+    height: 30px;
+}
+
+.sign-box label {
+    margin-left: 46px;
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+
+.sign-box h3 {
+    padding: 4px;
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sign-box input[type="submit"] {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #51b1e9;
+    cursor: pointer;
+    border-radius: 16px;
 }
 
 .btn-sign-out {
@@ -175,21 +270,78 @@ a:hover {
 
 .main-nav {
     height: 62px;
-    background: rgba(100, 100, 100, 0.3);
+    background: #fff;
 }
 
 .card {
-    background: white;
-    width: 250px;
-    height: 400px;
+    background: #f5f5f5;
+    display: flex;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+    font-family: Montserrat;
+    width: 240px;
+    height: 300px;
+    overflow: hidden;
     float: left;
     margin: 20px 10px;
 }
 
-.card p,
-h4,
-h2 {
-    padding-left: 7px;
+.card p {
+    margin-top: 158px;
+    width: 80%;
+    padding: 3px;
+    margin-left: -240px;
+    height: 30%;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+}
+
+.card h2 {
+    color: #111;
+    width: 100%;
+    height: 30px;
+    margin-top: 140px;
+    margin-left: -243px;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.card h1 {
+    color: rgb(255, 189, 9);
+    padding: 3px;
+    width: 100px;
+    height: 22px;
+    font-size: 14px;
+    margin-top: 220px;
+    margin-left: -200px;
+    margin-right: 2px;
+}
+
+.card h3 {
+    margin-top: 250px;
+    padding-top: 6px;
+    font-size: 12px;
+    width: 70px;
+    height: 30px;
+    margin-left: -225px;
+}
+
+.card button {
+    color: #fff;
+    border-radius: 10px;
+    padding: 3px;
+    background: #259814;
+    width: 50%;
+    height: 30px;
+    font-size: 14px;
+    margin-top: 250px;
+    margin-left: 0px;
+    cursor: pointer;
 }
 
 .product {
@@ -213,7 +365,7 @@ h2 {
 }
 
 .btn-add-to-cart {
-    margin-left: 90px;
+    margin-left: 0px;
     margin-top: 25px;
     background: #2ECC71;
     color: white;
@@ -222,9 +374,16 @@ h2 {
     height: 30px;
 }
 
-.search {
+.main-nav input {
+    width: 20%;
     margin-left: 40%;
-    margin-top: 8px;
+    border-radius: 8px;
+    margin-top: 13px;
+}
+
+.content {
+    margin-right: 30px;
+    background: #fff;
 }
 
 .content-break {
@@ -271,14 +430,31 @@ table {
     font-family: sans-serif;
 }
 
+table input {
+    width: 45px;
+}
+
 table th {
-    background: rgba(24, 117, 209, 0.7);
-    opacity: 0.8;
-    color: white;
+    background-color: rgb(16, 97, 86);
+    height: 35px;
+    padding: 3px;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2
+}
+
+#total-row {
+    background: rgb(41, 41, 90);
+    font-size: 23px;
+    color: orange;
+}
+
+#total-row td {
+    padding: 8px;
 }
 
 .cart-table {
@@ -292,20 +468,19 @@ tr:nth-child(even) {
     margin-top: 40px;
     margin-left: 20px;
     width: 80%;
-}
-
-.summary {
-    float: right;
-    width: 300px;
-    margin-right: 20px;
-    margin-top: 40px;
+    background: #fff;
 }
 
 .add-product-box {
     float: right;
+    height: 360px;
+    padding: 10px;
     width: 300px;
-    margin-right: 20px;
     margin-top: 40px;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #c7d0d2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 }
 
 .summary h4 {
@@ -333,15 +508,32 @@ tr:nth-child(even) {
     font-weight: bold;
 }
 
-.add-product-btn {
-    margin-top: 20px;
-    background: rgba(24, 117, 209, 0.7);
-    opacity: 0.9;
-    color: white;
-    border: solid 1px;
-    height: 40px;
-    font-weight: bold;
+.add-product-box input[type="submit"] {
     float: right;
+    margin-right: 20px;
+    margin-top: 40px;
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #51b1e9;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.add-product-box h3 {
+    margin-right: -10px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-size: 18px;
+    color: #444;
+    padding-top: 20px;
+    align-content: center;
+    height: 50px;
+    background-color: #f2f2f2;
+    font-weight: 400;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
 }
 
 .back-home {
@@ -373,10 +565,15 @@ tr:nth-child(even) {
 }
 
 .add-product-box input {
-    height: 25px;
-    width: 140px;
-    font-size: 15px;
-    text-align: left;
+    height: 22px;
+    float: right;
+    margin-right: 22px;
+    margin-bottom: -10px;
+    padding: 3px;
+    width: 70%;
+    margin-top: 20px;
+    margin-left: -5px;
+    font-size: 14px;
 }
 
 .product-form label,
@@ -390,13 +587,20 @@ h3 {
 }
 
 .success {
-    background: #2ECC71;
-    text-align: center
+    background: #F0FAEE;
+    color: #259814;
+    height: 35px;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    padding: 5px;
 }
 
 .error {
-    background: maroon;
-    text-align: center
+    background: #f56d6d;
+    font-size: 14px;
+    height: 35px;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    padding: 5px;
 }
 
 
@@ -423,6 +627,7 @@ h3 {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    margin-right: 20px;
 }
 
 
@@ -443,19 +648,37 @@ h3 {
 }
 
 .edit-box input {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 5px;
     height: 25px;
-    width: 85%;
+    margin-left: -8px;
+    width: 90%;
 }
 
-.edit-box-btn {
-    margin-top: 10px;
+.modal-content hr {
+    opacity: 0.1;
+    margin-top: 2px;
+}
+
+.edit-box input[type="submit"] {
+    margin-top: 5px;
     background: rgba(24, 117, 209, 0.7);
+    font-size: 13px;
+    width: 256px;
     opacity: 0.9;
+    padding: 2px;
     color: white;
     border: solid 1px;
-    height: 50px;
-    margin-left: 18px;
-    font-weight: bold;
+    height: 32px;
+    margin-left: -8px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.modal-content h3 {
+    font-size: 14px;
+    color: #444;
 }
 
 .numberCircle {
@@ -472,7 +695,9 @@ h3 {
 }
 
 .divider {
-    background: rgb(84, 84, 129);
+    background: #f6f6f6;
     height: 20px;
-    color: white
+    font-weight: bold;
+    font-size: 13px;
+    color: #444;
 }

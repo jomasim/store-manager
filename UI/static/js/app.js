@@ -22,7 +22,7 @@ if (document.getElementById('logout')) {
 function logout() {
     client.revokeToken()
     localStorage.removeItem("exp")
-    let message = "logged out successfully"
+    let message = "Logged out successfully"
     setTimeout(() => {
         //notify logout success message
         document.getElementById('notification').innerHTML = message

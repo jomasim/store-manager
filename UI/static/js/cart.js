@@ -36,15 +36,15 @@ function checkout(items) {
     localStorage.setItem('checkout', JSON.stringify(items))
 }
 
+function getCheckout() {
+    return localStorage.getItem('checkout')
+}
+
 function clearCheckout() {
     localStorage.removeItem('checkout')
 }
 
-function updateCartTable() {
-    // clear checkout first
-
-    clearCheckout()
-
+function getCartData() {
     products = JSON.parse(getCart())
     var collection = []
 
@@ -62,7 +62,16 @@ function updateCartTable() {
             item.total = item.price * item.count;
             return item
         })
+    }
+    return collection;
+}
 
+function updateCartTable(collection) {
+    // clear checkout first
+
+    clearCheckout()
+
+    if (collection) {
         // set items ready for checkout 
         checkout(collection)
     } else {
@@ -74,8 +83,7 @@ function updateCartTable() {
 
     let header = `
             <tr>
-                <th>Product ID</th>
-                <th>Product</th>
+                <th colspan="2">Item</th>
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Total</th>
@@ -83,21 +91,34 @@ function updateCartTable() {
         `
     let table = document.getElementById("cart-table");
     table.innerHTML = header
-
+    var grandTotal = 0;
     collection.forEach(product => {
-        table.innerHTML += '<tr>' +
-            '<td >' + product.id + '</td>' +
+        let product_item = JSON.stringify(product)
+
+        var count = quantityItem(product_item)
+        grandTotal += parseInt(product.total)
+
+        var tr = `
+            <tr id=${product.id}>
+        `
+        table.innerHTML += tr +
+            '<td>' + '<span class="close">&times;</span>' + '</td>' +
             '<td >' + product.name + '</td>' +
-            '<td >' + product.count + '</td>' +
-            '<td >' + product.price + '</td>' +
-            '<td >' + product.total + '</td>'
+            '<td >' + count + '</td>' +
+            '<td >' + "Ksh " + product.price + "/=" + '</td>' +
+            '<td >' + "Ksh " + product.total + "/=" + '</td>'
     });
+
+    table.innerHTML += '<tr id="total-row">' +
+        '<td colspan="4">' + "Total" + '</td>' +
+        '<td>' + "Ksh " + grandTotal + "/=" + '</td>'
 }
 
 window.onload = function(event) {
     // set cart items
     if (document.getElementById("cart-table")) {
-        updateCartTable()
+        var collection = getCartData()
+        updateCartTable(collection)
     }
 }
 
@@ -109,9 +130,35 @@ function clearItems() {
 
     setTimeout(() => {
         clearCart()
-        message = "items cleared successfully"
+        message = "Items cleared successfully"
         document.getElementById('notification').innerHTML = message
         document.getElementById('notification').className = "success"
         window.location.href = "home.html"
     }, 300)
+}
+
+function quantityItem(product) {
+    product = JSON.parse(product)
+    let count = product.count
+    count = count ? count : 0
+    var countItem = `
+                    <input  name="count" id=${product.id} type='number' value=${count} min=1 max=${product.quantity}
+                    onchange="updateLineItem(${product.id})">
+                `
+    return countItem;
+
+}
+
+function updateLineItem(id) {
+    let new_count = document.getElementById(id).getElementsByTagName("input").namedItem("count").value;
+    let collection = JSON.parse(getCheckout())
+    collection = collection.map(item => {
+        if (item.id === id) {
+            item.count = new_count;
+            item.total = parseInt(item.price) * parseInt(item.count)
+        }
+        return item;
+    })
+    updateCartTable(collection)
+
 }

@@ -34,20 +34,24 @@ export function addProduct(e) {
         .then(payload => {
             console.log(payload)
             let message = payload.body.message
+            message = message.charAt(0).toUpperCase() + message.slice(1);
             if (payload.status === 201) {
-
+                document.getElementById('notification').innerHTML = message
+                document.getElementById('notification').className = "success"
                 setTimeout(() => {
-                    //notify product posting success message
-                    document.getElementById('notification').innerHTML = message
-                    document.getElementById('notification').className = "success"
-                    document.getElementById('notification').focus()
-                }, 1000)
+                    document.getElementById('notification').removeAttribute("class")
+                    document.getElementById('notification').innerHTML = ""
+                }, 2500)
 
             } else {
                 // notify post errors 
                 document.getElementById('notification').innerHTML = message
                 document.getElementById('notification').className = "error"
-                document.getElementById('notification').focus()
+                setTimeout(() => {
+                    document.getElementById('notification').removeAttribute("class")
+                    document.getElementById('notification').innerHTML = ""
+                }, 2500)
+
             }
 
         })

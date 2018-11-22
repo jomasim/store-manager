@@ -127,14 +127,15 @@ if (document.getElementById("clear-cart")) {
 }
 
 function clearItems() {
-
+    message = "Items cleared successfully"
+    document.getElementById('notification').innerHTML = message
+    document.getElementById('notification').className = "success"
+    clearCart()
     setTimeout(() => {
-        clearCart()
-        message = "Items cleared successfully"
-        document.getElementById('notification').innerHTML = message
-        document.getElementById('notification').className = "success"
+        document.getElementById('notification').removeAttribute("class")
+        document.getElementById('notification').innerHTML = ""
         window.location.href = "home.html"
-    }, 300)
+    }, 2500)
 }
 
 function quantityItem(product) {

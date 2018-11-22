@@ -22,12 +22,12 @@ if (document.getElementById('logout')) {
 function logout() {
     client.revokeToken()
     localStorage.removeItem("exp")
+    localStorage.setItem("current_user", "Guest")
     let message = "Logged out successfully"
     setTimeout(() => {
         //notify logout success message
         document.getElementById('notification').innerHTML = message
         document.getElementById('notification').className = "success"
-        document.getElementById('notification').focus()
         window.location.href = 'index.html'
-    }, 100)
+    }, 2500)
 }

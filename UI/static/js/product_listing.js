@@ -24,6 +24,7 @@ function card(product) {
     var title = product.name
     var desc = product.description.info
     var price = "Ksh " + product.price + "/="
+    var category = product.category
     var quantity = product.quantity ? product.quantity : 0
 
     var product = JSON.stringify(product)
@@ -33,7 +34,7 @@ function card(product) {
     let card = `
                 <div class="card">
                     <img src="static/images/shoes.jpeg"> 
-                    <h2>${title}</h2>
+                    <h2>${title}~${category}</h2>
                     <p>${desc}</p>
                     <h1>${price}</h2>
                     <button onclick='addToCart(${list_string})'>Add to Cart</button>
@@ -46,9 +47,27 @@ function card(product) {
 document.getElementById("search-product").addEventListener("keyup", searchProduct)
 
 
-function searchProduct(e) {
-        // get search text from search input
+var categories = document.getElementsByClassName("category")
+for (let i = 0; i < categories.length; i++) {
+    categories[i].addEventListener("click", listByCategory)
+}
+
+
+function searchProduct() {
+    // get search text from search input
     let search_text = document.getElementById("search-product").value.toLowerCase();
+    search(search_text)
+}
+
+function listByCategory(e) {
+    e.preventDefault()
+    let url = new URL(e.target.href)
+    var category = url.searchParams.get("category")
+    search(category)
+
+}
+
+function search(search_text) {
     //collect all items with class card
     let products = document.getElementsByClassName("card");
     console.log(products[0])
@@ -59,6 +78,5 @@ function searchProduct(e) {
         } else {
             products[x].style.display = "none"
         }
-
     }
 }

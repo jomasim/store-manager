@@ -32,33 +32,40 @@ function createSale(e) {
         .then(payload => {
             console.log(payload)
             let message = payload.body.message
+            message = message.charAt(0).toUpperCase() + message.slice(1);
             if (payload.status === 401) {
                 message = "you must login first"
+                message = message.charAt(0).toUpperCase() + message.slice(1);
                 document.getElementById('notification').innerHTML = message
                 document.getElementById('notification').className = "error"
-                document.getElementById('notification').focus()
-
-                window.location.href = 'index.html'
-
+                setTimeout(() => {
+                    document.getElementById('notification').removeAttribute("class")
+                    document.getElementById('notification').innerHTML = ""
+                    window.location.href = 'index.html'
+                }, 2500)
             }
             if (payload.status === 201) {
-
+                //notify create sale success message
+                document.getElementById('notification').innerHTML = message
+                document.getElementById('notification').className = "success"
+                    // clear cart store
+                localStorage.removeItem("cart_items")
                 setTimeout(() => {
-                    //notify create sale success message
-                    document.getElementById('notification').innerHTML = message
-                    document.getElementById('notification').className = "success"
-                    document.getElementById('notification').focus()
+                    document.getElementById('notification').removeAttribute("class")
+                    document.getElementById('notification').innerHTML = ""
                     window.location.href = 'home.html'
-                        // clear cart store
-                    localStorage.removeItem("cart_items")
-                }, 300)
+                }, 2500)
 
 
             } else {
                 // notify post errors 
                 document.getElementById('notification').innerHTML = message
                 document.getElementById('notification').className = "error"
-                document.getElementById('notification').focus()
+                setTimeout(() => {
+                    document.getElementById('notification').removeAttribute("class")
+                    document.getElementById('notification').innerHTML = ""
+                }, 2500)
+
             }
 
         })
@@ -116,6 +123,7 @@ function updateSalesTable(sales) {
             '</tr>'
 
         sale.line_items.forEach(line_item => {
+            let product = line_item.product ? line_item.product.name : "---"
             let selling_price = "Ksh " + line_item.selling_price + "/="
             let total = Number(line_item.item_count) * Number(line_item.selling_price);
             total = "Ksh " + total + "/="
@@ -124,7 +132,7 @@ function updateSalesTable(sales) {
                 `
                 <tr>
                     <td>${sale.id}</td>
-                    <td>${line_item.product_id}</td>
+                    <td>${product}</td>
                     <td>${line_item.item_count}</td>
                     <td>${selling_price}</td>
                     <td>${total}</td>

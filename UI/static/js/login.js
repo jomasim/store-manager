@@ -32,6 +32,9 @@ function login(e) {
                 message = "Login Successful!"
                     // save token to localstorage
                 client.setToken(payload.body.access_token)
+                let username = payload.body.user.username ? payload.body.user.username : "Guest"
+                username = username.charAt(0).toUpperCase() + username.slice(1);
+                localStorage.setItem("current_user", username)
 
                 // set exp time
                 let exp = new Date('1970-01-01T' + payload.body.exp + 'Z');

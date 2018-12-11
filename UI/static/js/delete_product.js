@@ -19,20 +19,25 @@ function deleteRecord(id) {
             ))
             .then(payload => {
                 let message = payload.body.message
+                message = message.charAt(0).toUpperCase() + message.slice(1);
                 if (payload.status === 200) {
+                    //notify success message
+                    document.getElementById('notification').innerHTML = message
+                    document.getElementById('notification').className = "success"
 
                     setTimeout(() => {
-                        //notify success message
-                        document.getElementById('notification').innerHTML = message
-                        document.getElementById('notification').className = "success"
-                        document.getElementById('notification').focus()
-                    }, 1000)
+                        document.getElementById('notification').removeAttribute("class")
+                        document.getElementById('notification').innerHTML = ""
+                    }, 2500)
 
                 } else {
                     // notify  errors 
                     document.getElementById('notification').innerHTML = message
                     document.getElementById('notification').className = "error"
-                    document.getElementById('notification').focus()
+                    setTimeout(() => {
+                        document.getElementById('notification').removeAttribute("class")
+                        document.getElementById('notification').innerHTML = ""
+                    }, 2500)
                 }
 
             })

@@ -7,7 +7,7 @@ var route_name = url.substr(url.lastIndexOf('/') + 1);
 
 if (!client.session() && route_name !== "index.html") {
     // notify session errors 
-    let message = "you must login first!"
+    let message = "You must login first!"
     document.getElementById('notification').innerHTML = message
     document.getElementById('notification').className = "error"
     document.getElementById('notification').focus()
